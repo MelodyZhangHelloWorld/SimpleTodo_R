@@ -1,5 +1,4 @@
 {
-    "debug.javascript.autoAttachFilter": "smart",
     "grunt.autoDetect": "off",
     "jake.autoDetect": "off",
     "gulp.autoDetect": "off",
