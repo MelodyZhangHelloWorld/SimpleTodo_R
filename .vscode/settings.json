@@ -1,3 +1,14 @@
 {
-    "debug.javascript.autoAttachFilter": "smart"
+    "debug.javascript.autoAttachFilter": "smart",
+    "grunt.autoDetect": "off",
+    "jake.autoDetect": "off",
+    "gulp.autoDetect": "off",
+    "emmet.excludeLanguages": [
+
+        "markdown"
+    ],
+    "html.format.endWithNewline": true,
+    "html.format.indentHandlebars": true,
+    "html.format.indentInnerHtml": true,
+    "html.format.wrapLineLength": 0 //*?
 }
