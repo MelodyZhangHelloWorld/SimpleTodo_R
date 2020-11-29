@@ -1,5 +1,6 @@
 
 import './App.css';
+import Header from './components/layout/Header';
 
 // import { Alert , Breadcrumb, Button, Card, Form, FormControl, Nav, Navbar } from 'react-bootstrap'; //*
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -63,7 +64,9 @@ render () {
   
     console.log( this.state.todos)
 
-    return ( < div className = "App" >   
+        return (  
+    < div className = "App" >   
+    <Header />
     <header className = "App-header" >
     
    
