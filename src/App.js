@@ -1,8 +1,10 @@
 
 import './App.css';
-import { Component } from 'react';
+import {React, Component } from 'react';
 
-import {Container, } from 'react-bootstrap'; //*
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+
+import {Container} from 'react-bootstrap'; //*
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Todos from './components/Todos.js'
@@ -43,7 +45,7 @@ class App extends Component {
 
     //Toggle status
     markComplete = (id) => {
-        console.log('App.js ----- id: ', id ) 
+       // console.log('App.js ----- id: ', id ) 
         /**  */
         this.setState({todos: this.state.todos.map(todo => {
             if (todo.id === id) {
@@ -77,30 +79,34 @@ class App extends Component {
 render () {
     
   
-    console.log( this.state.todos)
+   // console.log( this.state.todos)
 
         return (  
-    < div className = "App" >   
-    <Header />
-    <header className = "App-header" >
-    <Container fluid>
+            //??
+ <Router>   
+        < div className = "App" >   
+        <Header />
+     
+        
 
- 
- <AddTodo addTodo={this.addTodo} />
- 
-   
- <Todos 
+    
+        <Container fluid>
+        <AddTodo addTodo={this.addTodo} />
+      
+        <Todos todos={this.state.todos} markComplete={this.markComplete}
+        delTodo={this.delTodo} />
+            </Container>
 
- todos={this.state.todos}
- markComplete={this.markComplete}
- delTodo={this.delTodo}
- 
- />
+      
 
-        </Container>
+  
 
-    </header> 
-    </div>
+
+    
+        
+        </div>
+
+</Router>
 );
 }
    

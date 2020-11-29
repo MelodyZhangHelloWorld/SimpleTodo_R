@@ -25,7 +25,8 @@ export class AddTodo extends Component {
       <Form className="mb-4 mt-3" onSubmit={this.onSubmit} >
 <Form.Row className="justify-content-center" >
 
-  <Col  xs='10' md='8' lg='4' xl='7' > 
+  <Col  xs='10' md={{ span: 5, offset: 2 }} lg={{ span: 5, offset: 2 }} 
+  xl={{ span: 7, offset:0}} > 
 
   <Form.Control type="text" name='title' 
   value={this.state.title}
