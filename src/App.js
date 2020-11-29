@@ -35,6 +35,18 @@ class App extends Component {
 
     }
 
+    //Toggle status
+    markComplete = (id) => {
+        console.log('App.js ----- id: ', id ) 
+        /**  */
+        this.setState({todos: this.state.todos.map(todo => {
+            if (todo.id === id) {
+                todo.completed = ! todo.completed
+            }
+            return todo;
+        }) })
+
+    }
 render () {
     
   
@@ -45,7 +57,9 @@ render () {
     
    
         <Todos 
+       
         todos={this.state.todos}
+        markComplete={this.markComplete}
         
         />
 
