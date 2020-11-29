@@ -21,22 +21,22 @@ class App extends Component {
         todos: [
             {
                 id: 1,
-                title: 'Todo item1',
-                completed: false,
+                title: 'React Crash Course - simple todo app',
+                completed: true,
             },
             {
                 id: 2,
-                title: 'Todo item2Todo item2Todo item2Todo item2Todo item2Todo item2',
+                title: 'Build an Expense Tracker | React Hooks & Context API',
                 completed: false,
             },
             {
                 id: 3,
-                title: 'Todo item3',
-                completed: true,
+                title: 'Node.js & Express API | Expense Tracker - Part 2 (MERN)',
+                completed: false,
             },
             {
                 id: 4,
-                title: 'Todo item4',
+                title: 'Some MERN stack App',
                 completed: false,
             },
         ]
