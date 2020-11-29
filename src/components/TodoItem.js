@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'; //***
-// import {  InputGroup,  } from 'react-bootstrap'; //*
+import {  Button  } from 'react-bootstrap'; //*
 
 export class TodoItem extends Component {
     getStyle = () => {
@@ -33,8 +33,10 @@ export class TodoItem extends Component {
           
         <input type="checkbox" 
         onChange={this.props.markComplete.bind(this, id)} /> {" "}
-             { title} 
-               
+             { title} {' '}
+             <Button 
+             onClick={this.props.delTodo.bind(this, id)}
+             variant="danger" size="sm">X</Button>{' '}
                 
             </div>
         )

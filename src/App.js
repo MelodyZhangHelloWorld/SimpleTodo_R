@@ -44,9 +44,20 @@ class App extends Component {
                 todo.completed = ! todo.completed
             }
             return todo;
-        }) })
+        }) });
 
     }
+
+    //Delete Todo
+
+    delTodo =(id) => {
+      //  console.log('App.js delTodo ', id)
+
+      this.setState({todos: [...this.state.todos.filter(
+          todo => todo.id !== id
+      ) ]})
+    }
+
 render () {
     
   
@@ -60,6 +71,7 @@ render () {
        
         todos={this.state.todos}
         markComplete={this.markComplete}
+        delTodo={this.delTodo}
         
         />
 

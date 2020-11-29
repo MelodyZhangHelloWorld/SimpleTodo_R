@@ -26,6 +26,7 @@ class Todos extends Component {
                 key={todoForEach.id}
                 todo={todoForEach} 
                 markComplete = {this.props.markComplete}
+                delTodo={this.props.delTodo}
             ></TodoItem>
         </Alert>
             )
