@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'; //***
-import {  Button  } from 'react-bootstrap'; //*
+import {  Alert,Button, Row, Col  } from 'react-bootstrap'; //*
 
 export class TodoItem extends Component {
     getStyle = () => {
@@ -30,13 +30,36 @@ export class TodoItem extends Component {
             <div style={this.getStyle()} > 
 
                  
+        <Row className="justify-content-center">
+        
+        <Col md={8}>
+        <Alert variant="info">
+       
+      <Row>
           
-        <input type="checkbox" 
+       <Col xs lg xl='10'   >
+       <Row className="justify-content-left">
+       <input type="checkbox"  className="m-2"
         onChange={this.props.markComplete.bind(this, id)} /> {" "}
              { title} {' '}
-             <Button 
+        </Row>
+       </Col>
+       
+       <Col xs lg xl='2'>
+       <Row className="justify-content-end">
+             <Button className="mr-2"
              onClick={this.props.delTodo.bind(this, id)}
              variant="danger" size="sm">X</Button>{' '}
+            </Row>
+             </Col>
+             
+      </Row>
+
+             
+       
+            </Alert>
+        </Col>
+        </Row>
                 
             </div>
         )

@@ -1,11 +1,11 @@
 
 import './App.css';
 import Header from './components/layout/Header';
-
-// import { Alert , Breadcrumb, Button, Card, Form, FormControl, Nav, Navbar } from 'react-bootstrap'; //*
+import {Container, } from 'react-bootstrap'; //*
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Todos from './components/Todos.js'
+import AddTodo from './components/AddTodo.js'
 import { Component } from 'react';
 
 class App extends Component {
@@ -19,7 +19,7 @@ class App extends Component {
             },
             {
                 id: 2,
-                title: 'Todo item2',
+                title: 'Todo item2Todo item2Todo item2Todo item2Todo item2Todo item2',
                 completed: false,
             },
             {
@@ -68,15 +68,21 @@ render () {
     < div className = "App" >   
     <Header />
     <header className = "App-header" >
-    
+    <Container fluid>
+
+ 
+ <AddTodo />
+ 
    
-        <Todos 
-       
-        todos={this.state.todos}
-        markComplete={this.markComplete}
-        delTodo={this.delTodo}
-        
-        />
+ <Todos 
+
+ todos={this.state.todos}
+ markComplete={this.markComplete}
+ delTodo={this.delTodo}
+ 
+ />
+
+        </Container>
 
     </header> 
     </div>
