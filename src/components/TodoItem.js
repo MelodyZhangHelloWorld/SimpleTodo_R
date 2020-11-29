@@ -27,7 +27,7 @@ export class TodoItem extends Component {
     render() {
         const { id, title } = this.props.todo; //** destructuring -- simplify */
         return ( 
-            <div style={this.getStyle()} > 
+            
 
                  
         <Row className="justify-content-center">
@@ -36,15 +36,16 @@ export class TodoItem extends Component {
         <Alert variant="info">
        
       <Row>
-          
+      
        <Col xs lg xl='10'   >
        <Row className="justify-content-left">
+       <div style={this.getStyle()} > 
        <input type="checkbox"  className="m-2"
         onChange={this.props.markComplete.bind(this, id)} /> {" "}
-             { title} {' '}
+             { title} {' '}   </div>
         </Row>
        </Col>
-       
+     
        <Col xs lg xl='2'>
        <Row className="justify-content-end">
              <Button className="mr-2"
@@ -62,7 +63,7 @@ export class TodoItem extends Component {
         </Col>
         </Row>
                 
-            </div>
+            
         )
     }
 }
