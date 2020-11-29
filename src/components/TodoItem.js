@@ -49,6 +49,7 @@ export class TodoItem extends Component {
        <Row className="justify-content-end">
              <Button className="mr-2"
              onClick={this.props.delTodo.bind(this, id)}
+             className='btn'
              variant="danger" size="sm">X</Button>{' '}
             </Row>
              </Col>

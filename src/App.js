@@ -1,12 +1,17 @@
 
 import './App.css';
-import Header from './components/layout/Header';
+import { Component } from 'react';
+
 import {Container, } from 'react-bootstrap'; //*
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Todos from './components/Todos.js'
-import AddTodo from './components/AddTodo.js'
-import { Component } from 'react';
+import Header from './components/layout/Header';
+import AddTodo from './components/AddTodo.js';
+
+import uuid from 'react-uuid' /*https://www.npmjs.com/package/react-uuid */
+
+
 
 class App extends Component {
 
@@ -59,6 +64,16 @@ class App extends Component {
       ) ]})
     }
 
+    addTodo = (title) => {
+      //  console.log('App.js -- addTodo -- title: ', title);
+        const newTodo ={
+            id: uuid(),
+            title: title,
+            completed: false
+        }
+        this.setState({ todos:[...this.state.todos, newTodo] })
+    }
+
 render () {
     
   
@@ -71,7 +86,7 @@ render () {
     <Container fluid>
 
  
- <AddTodo />
+ <AddTodo addTodo={this.addTodo} />
  
    
  <Todos 
