@@ -27,16 +27,16 @@ class App extends Component {
             {
                 id: 2,
                 title: 'Build an Expense Tracker | React Hooks & Context API',
-                completed: false,
+                completed: true,
             },
             {
                 id: 3,
                 title: 'Node.js & Express API | Expense Tracker - Part 2 (MERN)',
-                completed: false,
+                completed: true,
             },
             {
                 id: 4,
-                title: 'Some MERN stack App',
+                title: 'Some more MERN stack Apps',
                 completed: false,
             },
         ]
